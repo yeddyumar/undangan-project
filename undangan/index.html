@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Kartu Undangan -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow p-4 text-center" style="max-width: 400px;">
+
+            <h1 class="mb-3">Undangan Pernikahan</h1>
+            <h4 class="fw-bold">Yeddy & Lita</h4>
+
+            <p class="mt-3">
+                Sabtu, 10 Oktober 2026 <br>
+                Pukul 10.00 WIB
+            </p>
+
+            <p>CIBATOK</p>
+
+            <!-- Tombol Play Musik -->
+            <button id="playButton" class="btn btn-outline-secondary mt-3">
+                ▶ Putar Musik
+            </button>
+
+            <h5 class="mt-4 mb-2">Lokasi Acara</h5>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3963.3473869662093!2d106.66683197499356!3d-6.6036812933901965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzYnMTMuMyJTIDEwNsKwNDAnMDkuOSJF!5e0!3m2!1sen!2sid!4v1770770151814!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="musik" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+        Browsermu tidak mendukung audio.
+    </audio>
+
+    <!-- Script JavaScript -->
+    <script>
+        const tombol = document.getElementById("playButton");
+        const musik = document.getElementById("musik");
+
+        tombol.addEventListener("click", function() {
+            musik.play().catch(error => {
+                alert("Musik tidak bisa diputar, coba klik lagi atau cek file mp3.");
+            });
+            tombol.disabled = true; // tombol hilang setelah klik
+            tombol.innerText = "🎵 Musik Jalan";
+        });
+    </script>
+
+</body>
+</html>
